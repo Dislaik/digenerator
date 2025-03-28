@@ -1,0 +1,22 @@
+.tooltip {
+  position: absolute;
+  background: #282b30;
+  color: #f1f1f1;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 14px;
+  pointer-events: none;
+  animation: fadeOut 0.6s ease-in-out;
+  transform: translateX(-50%);
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, 0); /* Corrección */
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -20px); /* Se mueve 50px hacia arriba */
+  }
+}

@@ -1,1 +1,83 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: RobotoCondensed;
+  src: url(../public/font/RobotoCondensed/RobotoCondensed-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: RobotoCondensed;
+  src: url(../public/font/RobotoCondensed/RobotoCondensed-Bold.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: RobotoCondensed;
+  background-color: #f1f1f1 !important;
+}
+
+hr {
+  margin: 30px;
+}
+
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.row > * {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.input-group-text {
+  border-radius: 3px;
+}
+
+.form-control, .form-select {
+  border-radius: 3px;
+}
+
+textarea:focus,
+select:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus,
+.btn:focus, .btn:active {   
+  border-color: rgb(0, 128, 126, 0.8) !important;
+  box-shadow: none !important;
+  outline: 0 none !important;
+}
+
+.btn {
+  border: none;
+  border-radius: 3px !important;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.btn-primary:hover, .btn-primary:active {
+  background-color: #026362 !important;
+}
+
+.btn.disabled {
+  background-color: #00807e;
+}
+
+.btn-primary, .btn-primary:focus {
+  background-color: #00807e;
+}

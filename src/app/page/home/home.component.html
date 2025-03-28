@@ -1,0 +1,85 @@
+<div class="container content">
+  <div class="title">
+    <h1>DUMMY IMAGE GENERATOR</h1>
+    <p>Create custom dummy images with just one click!</p>
+  </div>
+  <div class="dummy-image-generator-container mb-4">
+    <canvas #canvas class="dummy-image-generator" [ngClass]="{'hidden': isAvaliable !== true}"></canvas>
+    <h3 [ngClass]="{'hidden': isAvaliable !== false}">No image available 😭</h3>
+  </div>
+  <div class="options-generator-container mb-3">
+    <div class="options-generator">
+      <div class="row mb-3">
+        <div class="col-4 pe-3">
+          <div class="input-group">
+            <span class="input-group-text" id="basic-addon1">Width</span>
+            <input #width type="text" class="form-control" placeholder="0" (input)="ngOnInput()">
+          </div>
+        </div>
+        <div class="col-4 pe-3">
+          <div class="input-group">
+            <span class="input-group-text" id="basic-addon1">Height</span>
+            <input #height type="text" class="form-control" placeholder="0" (input)="ngOnInput()">
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="input-group">
+            <span class="input-group-text" id="basic-addon1">Format</span>
+            <select #format class="form-select" aria-label="Default select example">
+              <option selected value="png">PNG</option>
+              <option value="jpg">JPG</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-primary" [ngClass]="{'disabled': isAvaliable === false}" (click)="ngDownloadDummy()">Download<i class="bi bi-download"></i></button>
+      </div>
+    </div>
+  </div>
+  <div class="github-profile-container">
+    <div class="github-profile">
+      <div class="d-flex justify-content-end">
+        <a href="https://github.com/Dislaik" target="_blank">
+          <div class="button-icon">
+            <div class="icon">
+              <i class="bi bi-github"></i>
+            </div>
+            <div class="cube">
+              <span class="side front">Matías N. Salas</span>
+              <span class="side top">Follow me on github <i class="bi bi-suit-heart-fill"></i></span>
+            </div>
+          </div>
+        </a>    
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="title">
+    <h1>ONE CLICK - COPY - PASTE DUMMY IMAGES</h1>
+    <p>No time to generate it by yourself? don't worry! just do click on some pre-made dummy images and paste it where you want!</p>
+  </div>
+
+  <div class="row dummy-images-row">
+    <img src="image/1280x300.png" class="m-1" alt="1280x300" style="width: calc(100% - 8px);" (click)="ngOnClickCopyDummy($event)" draggable="false">
+  </div>
+  <div class="row dummy-images-row">
+    <img src="image/500x200.png" class="m-1" alt="500x200" style="width: calc(39.0625% - 8px);" (click)="ngOnClickCopyDummy($event)" draggable="false">
+    <img src="image/580x200.png" class="m-1" alt="580x200" style="width: calc(45.3125% - 8px);" (click)="ngOnClickCopyDummy($event)" draggable="false">
+    <img src="image/200x200.png" class="m-1" alt="200x200" style="width: calc(15.625% - 8px);" (click)="ngOnClickCopyDummy($event)" draggable="false">
+  </div>
+  <div class="row dummy-images-row">
+    <img src="image/300x300.png" class="m-1" alt="300x300" style="width: calc(23.4375% - 8px);" (click)="ngOnClickCopyDummy($event)" draggable="false">
+    <img src="image/380x300.png" class="m-1" alt="380x300" style="width: calc(29.6875% - 8px);" (click)="ngOnClickCopyDummy($event)" draggable="false">
+    <img src="image/600x300.png" class="m-1" alt="600x300" style="width: calc(46.875% - 8px);" (click)="ngOnClickCopyDummy($event)" draggable="false">
+  </div>
+  <div class="row dummy-images-row">
+    <img src="image/600x400.png" class="m-1" alt="600x400" style="width: calc(46.875% - 8px);" (click)="ngOnClickCopyDummy($event)" draggable="false">
+    <img src="image/400x400.png" class="m-1" alt="400x400" style="width: calc(31.250% - 8px);" (click)="ngOnClickCopyDummy($event)" draggable="false">
+    <img src="image/280x400.png" class="m-1" alt="280x400" style="width: calc(21.875% - 8px);" (click)="ngOnClickCopyDummy($event)" draggable="false">
+  </div>
+  <div class="row dummy-images-row">
+    <img src="image/480x300.png" class="m-1" alt="480x300" style="width: calc(37.5% - 8px);" (click)="ngOnClickCopyDummy($event)" draggable="false">
+    <img src="image/800x300.png" class="m-1" alt="800x300" style="width: calc(62.5% - 8px);" (click)="ngOnClickCopyDummy($event)" draggable="false">
+  </div>
+</div>
